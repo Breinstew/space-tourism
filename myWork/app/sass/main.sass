@@ -11,6 +11,7 @@
 
 /* Box sizing */
 *
+  box-sizing: border-box
   &::before, &::after
     box-sizing: border-box
 
@@ -45,11 +46,11 @@ input, button, textarea, select
 /*        Utility classes     */
 /*----------------------------*/
 
-flex
+.flex
   display: flex
   gap: var(--gap, 1rem)
 
-grid
+.grid
   display: grid
   gap: var(--gap, 1rem)
 
@@ -68,4 +69,20 @@ grid
   clip: rect(0,0,0,0)
   white-space: nowrap
   border: 0
+
+/* colors */
+.bg-dark
+  background-color: hsl(var(--clr-dark))
+.bg-accent
+  background-color: hsl(var(--clr-light))
+.bg-white
+  background-color: hsl(var(--clr-white))
+
+.text-dark
+  color: hsl(var(--clr-dark))
+.text-accent
+  color: hsl(var(--clr-light))
+.text-white
+  color: hsl(var(--clr-white))
+
 
