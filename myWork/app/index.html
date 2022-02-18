@@ -96,19 +96,42 @@
       <h2 class="numbered-title"><span>03</span>Interactive elements</h2>
 
       <!-- navigation -->
-      <div></div>
+      <div>
+        <nav>
+          <ul class="primary-navigation underline-indicators flex">
+            <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span>Active</a></li>
+            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span>Hovered</a></li>
+            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>Idle</a></li>
+          </ul>
+        </nav>
+      </div>
 
       <div class="flex">
         <div style="margin-top: 5rem;">
           <!-- explore button -->
           <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
         </div>
-        <div style="margin-bottom: 50vh;">
+        <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem;">
           <!-- Tabs -->
+          <div class="tab-list underline-indicators flex">
+            <button aria-selected="true" class="uppercase ff-sans-cond text-accent letter-spacing-2 bg-dark">Moon </button>
+            <button aria-selected="false" class="uppercase ff-sans-cond text-accent letter-spacing-2 bg-dark">Mars</button>
+            <button aria-selected="false" class="uppercase ff-sans-cond text-accent letter-spacing-2 bg-dark">Europa</button>
+          </div>
 
           <!-- Dots -->
+          <div class="dot-indicators flex" style="justify-content: center;">
+            <button aria-selected="true"><span class="sr-only">Slide title</span></button>
+            <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+            <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+          </div>
 
           <!-- Numbers -->
+          <div class="numbers flex ff-serif fs-600" style="flex-direction: column; place-items: center;">
+            <button aria-selected="true"><span>1</span></button>
+            <button aria-selected="false"><span>2</span></button>
+            <button aria-selected="false"><span>3</span></button>
+          </div>
         </div>
       </div>
     </section>

@@ -106,7 +106,7 @@ input, button, textarea, select
 
 .letter-spacing-1
   letter-spacing: 4.75px
-.letter0spacing-2
+.letter-spacing-2
   letter-spacing: 2.7px
 .letter-spacing-3
   letter-spacing: 2.35px
@@ -175,4 +175,65 @@ input, button, textarea, select
   opacity: 1
   transform: scale(1.5)
 
+.primary-navigation
+  --gap: 8rem
+  --underline-gap: 2rem
+  list-style: none
+  padding: 0
+  margin: 0
+
+.primary-navigation a
+  text-decoration: none
+
+.primary-navigation a > span
+  font-weight: 700
+  margin-right: .5em
+
+.underline-indicators > *
+  cursor: pointer
+  padding: var(--underline-gap, 1rem) 0
+  border: 0
+  border-bottom: .2rem solid hsl(var(--clr-white) / 0)
+
+.underline-indicators > *:hover, .underline-indicators > *:focus
+  border-color: hsl(var(--clr-white) / .5)
+
+.underline-indicators > .active, .underline-indicators > [aria-selected="true"]
+  color: hsl(var(--clr-white) / 1)
+  border-color: hsl(var(--clr-white) / 1)
+
+.tab-list
+  --gap: 3rem
+
+.dot-indicators > * 
+  cursor: pointer
+  border: 0
+  border-radius: 50%
+  aspect-ratio: 1
+  padding: .5em
+  background-color: hsl(var(--clr-white) / .25)
+
+.dot-indicators > *:hover, .dot-indicators > *:focus  
+  background-color: hsl(var(--clr-white) / .5)
+
+.dot-indicators > [aria-selected="true"]
+  background-color: hsl(var(--clr-white) / 1)
+
+.numbers > *
+  cursor: pointer
+  background-color: transparent
+  border: 1px solid hsl(var(--clr-white) / .25)
+  color: hsl(var(--clr-white) / 1)
+  border-radius: 50%
+  aspect-ratio: 1
+  width: 2.5em
+
+.numbers > *:hover, .numbers > *:focus  
+  background-color: transparent
+  border: 1px solid hsl(var(--clr-white) / 1)
+  color: hsl(var(--clr-white) / 1)
+
+.numbers > [aria-selected="true"]
+  background-color: hsl(var(--clr-white) / 1)
+  color: hsl(var(--clr-dark))
 
