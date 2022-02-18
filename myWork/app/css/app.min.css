@@ -205,3 +205,36 @@ textarea {
   font-weight: 700;
   color: hsl(var(--clr-white)/.25)
 }
+.large-button {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  z-index: 1;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-decoration: none
+}
+.large-button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: hsl(var(--clr-white)/.15);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: opacity .5s linear,-webkit-transform .5s ease-in-out;
+  transition: opacity .5s linear,-webkit-transform .5s ease-in-out;
+  -o-transition: opacity .5s linear,transform .5s ease-in-out;
+  transition: opacity .5s linear,transform .5s ease-in-out;
+  transition: opacity .5s linear,transform .5s ease-in-out,-webkit-transform .5s ease-in-out
+}
+.large-button:focus::after,
+.large-button:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5)
+}
