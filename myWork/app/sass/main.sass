@@ -31,6 +31,9 @@ body
   line-height: 1.5
   min-height: 100vh
 
+  display: grid
+  grid-template-rows: min-content 1fr
+
 /* make images easer to work with */
 img, picture
   max-width: 100%
@@ -57,9 +60,16 @@ input, button, textarea, select
   display: flex
   gap: var(--gap, 1rem)
 
+.flex.even-columns > *
+  width: 100%
+  outline: 1px solid limegreen
+
 .grid
   display: grid
   gap: var(--gap, 1rem)
+
+.d-block  
+  display: block
 
 .flow > *:where(:not(:first-child))
   margin-top: var(--flow-space, 1rem)
@@ -69,6 +79,42 @@ input, button, textarea, select
   padding-inline: 2em
   margin-inline: auto
   max-width: 80rem
+
+.grid-container
+  text-align: center
+  border: 5px solid limegreen
+  display: grid
+  place-items: center
+  padding-inline: 1rem
+
+  > *:first-child
+    outline: 1px solid red
+
+  > *:last-child
+    outline: 1px solid yellow
+
+
+.grid-container * 
+  max-width: 50ch
+
+@media (min-width: 45em)
+  .grid-container
+    text-align: left
+    column-gap: var(--container-gap, 2rem)
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr)
+
+  .grid-container > *:first-child
+    grid-column: 2
+    outline: 1px solid red
+
+  .grid-container > *:last-child
+    grid-column: 3
+    outline: 1px solid yellow
+
+  .grid-container--home
+    padding-bottom: max(6rem, 20vh)
+    align-items: end
+
 
 .sr-only
   position: absolute
@@ -151,8 +197,9 @@ input, button, textarea, select
 /*----------------------------*/
 
 .large-button
+  font-size: 2rem
   position: relative
-  display: grid
+  display: inline-grid
   z-index: 1
   place-items: center
   padding: 0 2em
@@ -237,3 +284,23 @@ input, button, textarea, select
   background-color: hsl(var(--clr-white) / 1)
   color: hsl(var(--clr-dark))
 
+
+/*----------------------------------------*/
+/*        Page specific backgrounds       */
+/*----------------------------------------*/
+body 
+  background-size: cover
+  background-position: bottom center
+
+/* home */
+.home
+  background-image: url(../images/src/home/background-home-mobile.jpg)
+
+@media (min-width: 35rem)
+  .home
+    background-position: center center
+    background-image: url(../images/src/home/background-home-tablet.jpg)
+
+@media (min-width: 45rem)
+  .home
+    background-image: url(../images/src/home/background-home-desktop.jpg)
