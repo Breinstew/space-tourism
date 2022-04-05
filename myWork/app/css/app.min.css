@@ -320,6 +320,9 @@ textarea {
   margin: 0;
   background: hsl(var(--clr-dark)/.95)
 }
+.mobile-nav-toggle {
+  display: none
+}
 @supports ((-webkit-backdrop-filter:blur(1rem)) or (backdrop-filter:blur(1rem))) {
   .primary-navigation {
     background: hsl(var(--clr-white)/.05);
@@ -339,7 +342,23 @@ textarea {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column
+    flex-direction: column;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%)
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 1rem;
+    top: 2rem;
+    background: 0 0;
+    background-image: url(../images/src/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: 0
   }
   .primary-navigation.underline-indicators > .active {
     border: 0
