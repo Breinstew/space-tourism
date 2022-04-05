@@ -227,9 +227,15 @@ input, button, textarea, select
   list-style: none
   padding: 0
   margin: 0
-  background: hsl(var(--clr-white) / .05)
-  backdrop-filter: blur(1.5rem)
+  background: hsl(var(--clr-dark) / .95)
+  // backdrop-filter: blur(1.5rem)
+
+@supports (backdrop-filter: blur(1rem))
+  .primary-navigation
+    background: hsl(var(--clr-white) / .05)
+    backdrop-filter: blur(1.5rem)
   
+
 @media (max-width: 35rem)
   .primary-navigation
     --underline-gap: .5rem
