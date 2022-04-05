@@ -317,7 +317,10 @@ textarea {
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
-  margin: 0
+  margin: 0;
+  background: hsl(var(--clr-white)/.05);
+  -webkit-backdrop-filter: blur(1.5rem);
+  backdrop-filter: blur(1.5rem)
 }
 @media (max-width:35rem) {
   .primary-navigation {
@@ -325,7 +328,6 @@ textarea {
     position: fixed;
     inset: 0 0 0 30%;
     z-index: 1000;
-    background: #000;
     list-style: none;
     padding: min(20rem,15vh) 2rem;
     margin: 0;
