@@ -314,11 +314,29 @@ textarea {
   transform: scale(1.5)
 }
 .primary-navigation {
-  --gap: 8rem;
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0
+}
+@media (max-width:35rem) {
+  .primary-navigation {
+    --underline-gap: .5rem;
+    position: fixed;
+    inset: 0 0 0 30%;
+    z-index: 1000;
+    background: #000;
+    list-style: none;
+    padding: min(20rem,15vh) 2rem;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .primary-navigation.underline-indicators > .active {
+    border: 0
+  }
 }
 .primary-navigation a {
   text-decoration: none
