@@ -346,7 +346,12 @@ textarea {
     flex-direction: column;
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
-    transform: translateX(100%)
+    transform: translateX(100%);
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition: -webkit-transform .5s ease-in-out;
+    -o-transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out,-webkit-transform .5s ease-in-out
   }
   .primary-navigation[data-visible=true] {
     -webkit-transform: translateX(0);
@@ -362,9 +367,17 @@ textarea {
     background: 0 0;
     background-image: url(../images/src/shared/icon-hamburger.svg);
     background-repeat: no-repeat;
+    background-position: center;
     width: 1.5rem;
     aspect-ratio: 1;
     border: 0
+  }
+  .mobile-nav-toggle:focus-visible {
+    outline: 5px solid #fff;
+    outline-offset: 5px
+  }
+  .mobile-nav-toggle[aria-expanded=true] {
+    background-image: url(../images/src/shared/icon-close.svg)
   }
   .primary-navigation.underline-indicators > .active {
     border: 0
