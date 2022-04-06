@@ -91,7 +91,8 @@ body {
   -ms-grid-rows: -webkit-min-content 1fr;
   -ms-grid-rows: min-content 1fr;
   grid-template-rows: -webkit-min-content 1fr;
-  grid-template-rows: min-content 1fr
+  grid-template-rows: min-content 1fr;
+  overflow-x: hidden
 }
 img,
 picture {
@@ -346,6 +347,11 @@ textarea {
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transform: translateX(100%)
+  }
+  .primary-navigation[data-visible=true] {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0)
   }
   .mobile-nav-toggle {
     display: block;
